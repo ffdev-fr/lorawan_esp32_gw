@@ -1,0 +1,147 @@
+\hypertarget{main_8c}{}\section{test/main.c File Reference}
+\label{main_8c}\index{test/main.\+c@{test/main.\+c}}
+
+
+Programme de tests.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Objet chaîne de caractères. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114}{Str\+\_\+err\+\_\+e}} \{ \mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114a873f21f523dfc0783f52471131632a80}{S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR}}, 
+\mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114a6553fe66986ddca61eecc927064bdc15}{S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR}}, 
+\mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114a8aff2f6d0b0a343fc66bbb89d2128ad9}{N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Constantes d\textquotesingle{}erreurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114}{Str\+\_\+err\+\_\+e}} \mbox{\hyperlink{main_8c_a36f8ccef0de6ad8791338fac5aa83a6d}{str\+\_\+destroy}} (\mbox{\hyperlink{struct_str__t}{Str\+\_\+t}} $\ast$$\ast$self)
+\begin{DoxyCompactList}\small\item\em Start the H\+T\+TP server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_str__t}{Str\+\_\+t}} $\ast$ \mbox{\hyperlink{main_8c_abe2d8ca04675c7653042ec55aa3583c4}{str\+\_\+new}} (const char $\ast$sz, char sztoto)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une nouvelle instance d\textquotesingle{}un objet \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Entrée du programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programme de tests. 
+
+\begin{DoxyAuthor}{Author}
+Franck.\+H 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+6 septembre 2007
+\end{DoxyDate}
+Programme de test pour l\textquotesingle{}objet de gestion des chaînes de caractères \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{main_8c_a453c49b2528434b9260435d9098c6114}\label{main_8c_a453c49b2528434b9260435d9098c6114}} 
+\index{main.\+c@{main.\+c}!Str\+\_\+err\+\_\+e@{Str\+\_\+err\+\_\+e}}
+\index{Str\+\_\+err\+\_\+e@{Str\+\_\+err\+\_\+e}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Str\+\_\+err\+\_\+e}{Str\_err\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114}{Str\+\_\+err\+\_\+e}}}
+
+
+
+Constantes d\textquotesingle{}erreurs. 
+
+Str\+\_\+err\+\_\+e est une série de constantes prédéfinie pour diverses futures fonctions de l\textquotesingle{}objet \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR@{S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR@{S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR}}}\mbox{\Hypertarget{main_8c_a453c49b2528434b9260435d9098c6114a873f21f523dfc0783f52471131632a80}\label{main_8c_a453c49b2528434b9260435d9098c6114a873f21f523dfc0783f52471131632a80}} 
+S\+T\+R\+\_\+\+N\+O\+\_\+\+E\+RR&Pas d\textquotesingle{}erreur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR@{S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR@{S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR}}}\mbox{\Hypertarget{main_8c_a453c49b2528434b9260435d9098c6114a6553fe66986ddca61eecc927064bdc15}\label{main_8c_a453c49b2528434b9260435d9098c6114a6553fe66986ddca61eecc927064bdc15}} 
+S\+T\+R\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+E\+RR&Erreur\+: Objet vide ou non initialisé. mais bla bla bla \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR@{N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR@{N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR}}}\mbox{\Hypertarget{main_8c_a453c49b2528434b9260435d9098c6114a8aff2f6d0b0a343fc66bbb89d2128ad9}\label{main_8c_a453c49b2528434b9260435d9098c6114a8aff2f6d0b0a343fc66bbb89d2128ad9}} 
+N\+B\+\_\+\+S\+T\+R\+\_\+\+E\+RR&Nombre total de constantes d\textquotesingle{}erreur. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Entrée du programme. 
+
+In current design, there is only one client object for a single C\+S\+X1276 instance (the\textquotesingle{}C\+Lora\+Node\+Manager\textquotesingle{}).~\newline
+ In other words, commands are serialized here and there is no concurrency on the \textquotesingle{}C\+S\+X1276\+\_\+\+Process\+Command\textquotesingle{} method.
+
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS -\/ Arrêt normal du programme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a36f8ccef0de6ad8791338fac5aa83a6d}\label{main_8c_a36f8ccef0de6ad8791338fac5aa83a6d}} 
+\index{main.\+c@{main.\+c}!str\+\_\+destroy@{str\+\_\+destroy}}
+\index{str\+\_\+destroy@{str\+\_\+destroy}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{str\+\_\+destroy()}{str\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8c_a453c49b2528434b9260435d9098c6114}{Str\+\_\+err\+\_\+e}} str\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_str__t}{Str\+\_\+t}} $\ast$$\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Start the H\+T\+TP server. 
+
+The listen sockets (Command and Event) are created and the A\+CC server is ready to receive incoming connection requests.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns \textquotesingle{}true\textquotesingle{} if the A\+CC server is started.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Events on listen sockets are detected and processed by the \textquotesingle{}C\+Acc\+Server\+\_\+\+Process\+Events\textquotesingle{} function (periodically called by the owner object). 
+\end{DoxyNote}
+\mbox{\Hypertarget{main_8c_abe2d8ca04675c7653042ec55aa3583c4}\label{main_8c_abe2d8ca04675c7653042ec55aa3583c4}} 
+\index{main.\+c@{main.\+c}!str\+\_\+new@{str\+\_\+new}}
+\index{str\+\_\+new@{str\+\_\+new}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{str\+\_\+new()}{str\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}} $\ast$ str\+\_\+new (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sz,  }\item[{char}]{sztoto }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une nouvelle instance d\textquotesingle{}un objet \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & Chaîne à stocker dans l\textquotesingle{}objet \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}.~\newline
+ Ne peut être N\+U\+LL.\\
+\hline
+{\em sztoto} & Chaîne à stocker dans l\textquotesingle{}objet \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}}, ne peut être N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance nouvelle allouée d\textquotesingle{}un objet de type \mbox{\hyperlink{struct_str__t}{Str\+\_\+t}} ou N\+U\+LL.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function must be peridically called by the owner object in order to execute the A\+CC server code.~\newline
+ The A\+CC client starts a new \textquotesingle{}Acc\+Connection\textquotesingle{} by opening a socket on the \textquotesingle{}Command\textquotesingle{} port and another socket on the \textquotesingle{}Event\textquotesingle{} port of the A\+C\+C\+Server\+:~\newline
+
+\begin{DoxyItemize}
+\item The sequence must be respected (i.\+e. \textquotesingle{}Command\textquotesingle{} port first, then \textquotesingle{}Event\textquotesingle{} port).~\newline
+
+\item The connection is ready only when both sockets have been opened.~\newline
+
+\end{DoxyItemize}
+\end{DoxyNote}

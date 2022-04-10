@@ -1,0 +1,160 @@
+/**
+ * \file main.c
+ * \brief Programme de tests.
+ * \author Franck.H
+ * \version 0.1
+ * \date 6 septembre 2007
+ *
+ * Programme de test pour l'objet de gestion des chaînes de caractères Str_t.
+ *
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ 
+ 
+/**
+ * \struct Str_t
+ * \brief Objet chaîne de caractères.
+ *
+ * Str_t est un petit objet de gestion de chaînes de caractères. 
+ * La chaîne se termine obligatoirement par un zéro de fin et l'objet 
+ * connait la taille de chaîne contient !
+ */
+typedef struct
+{
+   char * sz;  /*!< Chaîne avec  caractère null de fin de chaîne. */
+   size_t len; /*!< Taille de la chaîne sz sans compter le zéro de fin. */
+}
+Str_t;
+ 
+ 
+/**
+ * \enum Str_err_e
+ * \brief Constantes d'erreurs.
+ *
+ * Str_err_e est une série de constantes prédéfinie pour diverses futures 
+ * fonctions de l'objet Str_t.
+ */
+typedef enum
+{
+   STR_NO_ERR,    /*!< Pas d'erreur. */
+   STR_EMPTY_ERR, /*!< Erreur: Objet vide ou non initialisé.
+                               mais bla bla bla */
+ 
+   NB_STR_ERR     /*!< Nombre total de constantes d'erreur. */
+}
+Str_err_e;
+ 
+ 
+/*****************************************************************************************//**
+@fn         Str_err_e str_destroy (Str_t ** self)
+
+@brief      Start the HTTP server. 
+
+@details    The listen sockets (Command and Event) are created and the ACC server is ready to
+            receive incoming connection requests.
+
+@param      self
+            The object pointer 
+ 
+@return     The function returns 'true' if the ACC server is started. 
+
+@note       Events on listen sockets are detected and processed by the 'CAccServer_ProcessEvents' 
+            function (periodically called by the owner object).
+*********************************************************************************************/
+Str_err_e str_destroy (Str_t ** self)
+{
+   Str_err_e err = STR_EMPTY_ERR;
+ 
+   if (self != NULL && *self != NULL)
+   {
+      free (* self);
+      *self = NULL;
+ 
+      err = STR_NO_ERR;
+   }
+ 
+   return err;
+}
+ 
+ 
+/*****************************************************************************************************************//**
+\fn     Str_t * str_new (const char * sz, char sztoto)
+
+\brief  Fonction de création d'une nouvelle instance d'un objet Str_t.
+
+\param  sz Chaîne à stocker dans l'objet Str_t.\n
+           Ne peut être NULL.
+
+\param  sztoto 
+        Chaîne à stocker dans l'objet Str_t, ne peut être NULL.
+
+\return Instance nouvelle allouée d'un objet de type Str_t ou NULL.
+
+\note   This function must be peridically called by the owner object in order to execute 
+        the ACC server code.\n
+        The ACC client starts a new 'AccConnection' by opening a socket on the 'Command'
+        port and another socket on the 'Event' port of the ACCServer:\n
+         - The sequence must be respected (i.e. 'Command' port first, then 'Event' port).\n
+         - The connection is ready only when both sockets have been opened.\n
+**********************************************************************************************************************/
+Str_t * str_new (const char * sz, char sztoto)
+{
+   Str_t * self = NULL;
+ 
+   if (sz != NULL && strlen (sz) > 0)
+   {
+      self = malloc (sizeof (* self));
+ 
+      if (self != NULL)
+      {
+         self->len = strlen (sz);
+         self->sz = malloc (self->len + 1);
+ 
+         if (self->sz != NULL)
+         {
+            strcpy (self->sz, sz);
+         }
+         else
+         {
+            str_destroy (& self);
+         }
+      }
+   }
+ 
+   return self;
+}
+ 
+ 
+/*****************************************************************************************************************//**
+  @fn      int main (void)
+
+  @brief   Entrée du programme. 
+
+  @details In current design, there is only one client object for a single CSX1276 instance (the'CLoraNodeManager').\n
+           In other words, commands are serialized here and there is no concurrency on the 
+           'CSX1276_ProcessCommand' method. 
+
+  @return  EXIT_SUCCESS - Arrêt normal du programme.
+**********************************************************************************************************************/
+int main (void)
+{
+   Str_err_e err;
+   Str_t * my_str = str_new ("Ma chaine de caracteres !");
+ 
+   if (my_str != NULL)
+   {
+      printf ("%s\n", my_str->sz);
+      printf ("Taille de la chaine : %d\n", my_str->len);
+ 
+      err = str_destroy (& my_str);
+ 
+      if (! err)
+      {
+         printf ("L'objet a ete libere correctement !\n");
+      }
+   }
+ 
+   return EXIT_SUCCESS;
+}

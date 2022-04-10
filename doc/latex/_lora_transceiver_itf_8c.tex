@@ -1,0 +1,157 @@
+\hypertarget{_lora_transceiver_itf_8c}{}\section{test/\+Lora\+Transceiver\+Itf.c File Reference}
+\label{_lora_transceiver_itf_8c}\index{test/\+Lora\+Transceiver\+Itf.\+c@{test/\+Lora\+Transceiver\+Itf.\+c}}
+
+
+A Lora\+Transceiver manages the hardware used for radio transmission with Lo\+Ra protocol.  
+
+
+{\ttfamily \#include $<$Common.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Lora\+Transceiver\+Itf.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Lora\+Transceiver \mbox{\hyperlink{_lora_transceiver_itf_8c_a59269d5d925479605f9dae4efa3fd10e}{I\+Lora\+Transceiver\+\_\+\+New}} (void $\ast$p\+Owner\+Object, C\+Lora\+Transceiver\+Itf\+Impl p\+Owner\+Itf\+Impl)
+\begin{DoxyCompactList}\small\item\em Object construction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_lora_transceiver_itf_8c_a0a2800f8585f4a25f79720a3d6801409}{I\+Lora\+Transceiver\+\_\+\+Delete}} (I\+Lora\+Transceiver this)
+\begin{DoxyCompactList}\small\item\em Object destruction. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_lora_transceiver_itf_8c_a17bcc51efd5e0b18018b34a9ee0b5c5c}{I\+Lora\+Transceiver\+\_\+\+Add\+Ref}} (I\+Lora\+Transceiver this)
+\begin{DoxyCompactList}\small\item\em Increments the interface\textquotesingle{}s reference count. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_lora_transceiver_itf_8c_a182231956db1478cff860f59b3857a24}{I\+Lora\+Transceiver\+\_\+\+Release\+Itf}} (I\+Lora\+Transceiver this)
+\begin{DoxyCompactList}\small\item\em Increments the interface\textquotesingle{}s reference count. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_lora_transceiver_itf_8c_a41034f947134bf47a7c5cfbdf4ea6bdb}{I\+Lora\+Transceiver\+\_\+\+Initialize}} (I\+Lora\+Transceiver this)
+\begin{DoxyCompactList}\small\item\em Initializes the Lora Transceiver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Lora\+Transceiver manages the hardware used for radio transmission with Lo\+Ra protocol. 
+
+\begin{DoxyAuthor}{Author}
+F.\+Fargon
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16/02/2018
+\end{DoxyDate}
+This class is the interface exposed by objects implementing the low level layer of Lo\+Ra packet transmission (i.\+e. the drivers of Semtech S\+X12xx chips).~\newline
+ In current implementation, this interface is provided by the C\+S\+X1276 object.
+
+\begin{DoxyNote}{Note}
+This class IS T\+H\+R\+E\+AD S\+A\+FE. 
+\end{DoxyNote}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_lora_transceiver_itf_8c_a17bcc51efd5e0b18018b34a9ee0b5c5c}\label{_lora_transceiver_itf_8c_a17bcc51efd5e0b18018b34a9ee0b5c5c}} 
+\index{Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}!I\+Lora\+Transceiver\+\_\+\+Add\+Ref@{I\+Lora\+Transceiver\+\_\+\+Add\+Ref}}
+\index{I\+Lora\+Transceiver\+\_\+\+Add\+Ref@{I\+Lora\+Transceiver\+\_\+\+Add\+Ref}!Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}}
+\subsubsection{\texorpdfstring{I\+Lora\+Transceiver\+\_\+\+Add\+Ref()}{ILoraTransceiver\_AddRef()}}
+{\footnotesize\ttfamily uint32\+\_\+t I\+Lora\+Transceiver\+\_\+\+Add\+Ref (\begin{DoxyParamCaption}\item[{I\+Lora\+Transceiver}]{this }\end{DoxyParamCaption})}
+
+
+
+Increments the interface\textquotesingle{}s reference count. 
+
+This function invokes the implementation of \textquotesingle{}Add\+Ref\textquotesingle{} method on owner object.~\newline
+ The \textquotesingle{}Add\+Ref\textquotesingle{} method is invoked by client objects to make sure that interface will be valid until they need it (i.\+e. client object invokes \textquotesingle{}Release\+Itf\textquotesingle{} when it do not need the interface anymore).
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The object pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of reference count once incremented. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_lora_transceiver_itf_8c_a0a2800f8585f4a25f79720a3d6801409}\label{_lora_transceiver_itf_8c_a0a2800f8585f4a25f79720a3d6801409}} 
+\index{Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}!I\+Lora\+Transceiver\+\_\+\+Delete@{I\+Lora\+Transceiver\+\_\+\+Delete}}
+\index{I\+Lora\+Transceiver\+\_\+\+Delete@{I\+Lora\+Transceiver\+\_\+\+Delete}!Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}}
+\subsubsection{\texorpdfstring{I\+Lora\+Transceiver\+\_\+\+Delete()}{ILoraTransceiver\_Delete()}}
+{\footnotesize\ttfamily void I\+Lora\+Transceiver\+\_\+\+Delete (\begin{DoxyParamCaption}\item[{I\+Lora\+Transceiver}]{this }\end{DoxyParamCaption})}
+
+
+
+Object destruction. 
+
+Destroys the interface object.~\newline
+ This method is allowed only for objects implementing the \textquotesingle{}I\+Lora\+Transceiver\textquotesingle{} interface (\textquotesingle{}C\+S\+X1276\textquotesingle{}, ...) (protected destructor).~\newline
+ It is called by owner object when interface reference count reaches 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The object pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_lora_transceiver_itf_8c_a41034f947134bf47a7c5cfbdf4ea6bdb}\label{_lora_transceiver_itf_8c_a41034f947134bf47a7c5cfbdf4ea6bdb}} 
+\index{Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}!I\+Lora\+Transceiver\+\_\+\+Initialize@{I\+Lora\+Transceiver\+\_\+\+Initialize}}
+\index{I\+Lora\+Transceiver\+\_\+\+Initialize@{I\+Lora\+Transceiver\+\_\+\+Initialize}!Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}}
+\subsubsection{\texorpdfstring{I\+Lora\+Transceiver\+\_\+\+Initialize()}{ILoraTransceiver\_Initialize()}}
+{\footnotesize\ttfamily bool I\+Lora\+Transceiver\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{I\+Lora\+Transceiver}]{this }\end{DoxyParamCaption})}
+
+
+
+Initializes the Lora Transceiver. 
+
+This function invokes the implementation of \textquotesingle{}Initialize\textquotesingle{} method on owner object.~\newline
+ The \textquotesingle{}Initialize\textquotesingle{} method is invoked by client object during startup to reset the Lo\+Ra radio device and to configure it on its default state (typically standby without radio activity).
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The object pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns \textquotesingle{}true\textquotesingle{} if the Lo\+Ra Transceiver is ready or \textquotesingle{}false\textquotesingle{} if an error has occured.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Typically the Lora Transceiver is managed by a single owner objet. Only this owner calls administrative methods like \textquotesingle{}Initialize\textquotesingle{}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_lora_transceiver_itf_8c_a59269d5d925479605f9dae4efa3fd10e}\label{_lora_transceiver_itf_8c_a59269d5d925479605f9dae4efa3fd10e}} 
+\index{Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}!I\+Lora\+Transceiver\+\_\+\+New@{I\+Lora\+Transceiver\+\_\+\+New}}
+\index{I\+Lora\+Transceiver\+\_\+\+New@{I\+Lora\+Transceiver\+\_\+\+New}!Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}}
+\subsubsection{\texorpdfstring{I\+Lora\+Transceiver\+\_\+\+New()}{ILoraTransceiver\_New()}}
+{\footnotesize\ttfamily I\+Lora\+Transceiver I\+Lora\+Transceiver\+\_\+\+New (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Owner\+Object,  }\item[{C\+Lora\+Transceiver\+Itf\+Impl}]{p\+Owner\+Itf\+Impl }\end{DoxyParamCaption})}
+
+
+
+Object construction. 
+
+Construction allowed only for objects implementing the \textquotesingle{}I\+Lora\+Transceiver\textquotesingle{} interface (\textquotesingle{}C\+S\+X1276\textquotesingle{}, ...) (protected constructor)
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Owner\+Object} & Object implementing the interface (i.\+e. which provides interface to client objects).~\newline
+ \\
+\hline
+{\em p\+Owner\+Itf\+Impl} & Array of pointers to I\+Lora\+Transceiver implementation functions in parent object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new \textquotesingle{}I\+Lora\+Transceiver\textquotesingle{} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_lora_transceiver_itf_8c_a182231956db1478cff860f59b3857a24}\label{_lora_transceiver_itf_8c_a182231956db1478cff860f59b3857a24}} 
+\index{Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}!I\+Lora\+Transceiver\+\_\+\+Release\+Itf@{I\+Lora\+Transceiver\+\_\+\+Release\+Itf}}
+\index{I\+Lora\+Transceiver\+\_\+\+Release\+Itf@{I\+Lora\+Transceiver\+\_\+\+Release\+Itf}!Lora\+Transceiver\+Itf.\+c@{Lora\+Transceiver\+Itf.\+c}}
+\subsubsection{\texorpdfstring{I\+Lora\+Transceiver\+\_\+\+Release\+Itf()}{ILoraTransceiver\_ReleaseItf()}}
+{\footnotesize\ttfamily uint32\+\_\+t I\+Lora\+Transceiver\+\_\+\+Release\+Itf (\begin{DoxyParamCaption}\item[{I\+Lora\+Transceiver}]{this }\end{DoxyParamCaption})}
+
+
+
+Increments the interface\textquotesingle{}s reference count. 
+
+This function invokes the implementation of \textquotesingle{}Releas\+Itf\textquotesingle{} method on owner object.~\newline
+ The \textquotesingle{}Release\+Itf\textquotesingle{} method is invoked by client objects when it do not need the interface anymore.~\newline
+ Typically, the owner object destroys the interface and itself when no more object is requiring it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The object pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of reference count once decremented. 
+\end{DoxyReturn}

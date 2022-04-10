@@ -1,0 +1,66 @@
+MicroPython 2ac6da2 on 2017-12-18; LoPy with ESP32
+Login as: micro
+Password:
+Login succeeded!
+Type "help()" for more information.
+
+MicroPython 2ac6da2 on 2017-12-18; LoPy with ESP32
+Type "help()" for more information.
+>>> [   106.968] Sending Pull_Data...
+[   107.042] Received from server, type:
+[   107.046] Pull ack
+[   126.971] Sending Push_Data...
+[   127.043] Received from server, type:
+[   127.047] Push ack
+[   130.701] Sending Push_Data...
+[   130.705] Received packet: {"rxpk": [{"data": "QDIRASYAAQACUn0u9aFlemnAJ6vEwbjP8qvhKYSjUQ5eMohREiv4eRkjQbw=", "time": "2018-11-25T14:16:30.656890Z", "chan":0, "tmst": 128978564, "stat": 1, "modu": "LORA", "lsnr": 7.0, "rssi": -42, "rfch": 0, "codr": "4/5", "freq": 868.1, "datr": "SF7BW125", "size": 44}]}
+[   130.768] Received from server, type:
+[   130.771] Push ack
+[   131.968] Sending Pull_Data...
+[   132.039] Received from server, type:
+[   132.044] Pull ack
+[   150.697] Sending Push_Data...
+[   150.701] Received packet: {"rxpk": [{"data": "QDIRASYAAgACBilIxkalXRAklRDz7AxF0qrEweJ41UQ6IEWoQjURgTdn0dM=", "time": "2018-11-25T14:16:50.651908Z", "chan":0, "tmst": 148564067, "stat": 1, "modu": "LORA", "lsnr": 6.0, "rssi": -40, "rfch": 0, "codr": "4/5", "freq": 868.1, "datr": "SF7BW125", "size": 44}]}
+[   150.763] Received from server, type:
+[   150.768] Push ack
+[   156.968] Sending Pull_Data...
+[   157.036] Received from server, type:
+[   157.042] Pull ack
+[   170.695] Sending Push_Data...
+[   170.699] Received packet: {"rxpk": [{"data": "QDIRASYAAwACTZS2XoEWW+zBy3apgd3UIshFTa98CR9dRQ2V9AeQBPQyxgA=", 
+                                          "time": "2018-11-25T14:17:10.650888Z", "chan": 0, "tmst": 168142852, "stat": 1, 
+					  "modu": "LORA", "lsnr": 7.0, "rssi": -39, "rfch": 0, "codr": "4/5", "freq": 868.1, 
+					  "datr": "SF7BW125", "size": 44}]}
+[   170.761] Received from server, type:
+[   170.766] Push ack
+[   181.968] Sending Pull_Data...
+[   182.037] Received from server, type:
+[   182.042] Pull ack
+
+
+GW Perso:
+---------
+
+0x02, 0xBD, 0x00, 0x00, 0x24, 0x0A, 0xC4, 0xFF, 0xFE, 0x02, 0x72, 0xB4, 
+{"rxpk":[{"tmst":39760,"time":"2018-11-25 13:28:48.382524Z","freq":868.100,"modu":"LORA","datr":"SF7BW125","lsnr":7.0,"rssi":-21,"size":44,
+"data":"QDIRASYAAgACBilN7Qi2XRAklRDr7AxFTKrEweh41UY6IEWqQjUQdjfzgAo="}]}
+
+
+REM: Pour un STAT
+
+0x02, 0x08, 0x00, 0x00, 0x24, 0x0A, 0xC4, 0xFF, 0xFE, 0x02, 0x72, 0xB4, 
+{"stat":{"time":"2018-11-25 13:28:15 GMT","lati":45.835549,"long":2.281144,"alti":110,"rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0}}
+
+
+
+Ajouter en dur : 
+------------------
+"stat": 1,"rfch": 0, "codr": "4/5"
+
+En fait: Pour avoir le ACK, manquait le 'T' dans le format de "time"
+
+Par contre, pour que la donnée soit vue dans TTN, il faut mettre le "codr"
+
+
+
+

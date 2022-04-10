@@ -1,0 +1,2065 @@
+I (10) boot: ESP-IDF v3.0-rc1-dirty 2nd stage bootloader
+I (10) boot: compile time 09:28:05
+I (10) boot: Enabling RNG early entropy source...
+I (14) boot: SPI Speed      : 40MHz
+I (18) boot: SPI Mode       : DIO
+I (22) boot: SPI Flash Size : 4MB
+I (26) boot: Partition Table:
+I (30) boot: ## Label            Usage          Type ST Offset   Length
+I (37) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (45) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (52) boot:  2 factory          factory app      00 00 00010000 00100000
+I (60) boot: End of partition table
+I (64) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x1c98c (117                                                                                            132) map
+I (113) esp_image: segment 1: paddr=0x0002c9b4 vaddr=0x3ffb0000 size=0x03534 ( 1                                                                                            3620) load
+I (119) esp_image: segment 2: paddr=0x0002fef0 vaddr=0x40080000 size=0x00120 (                                                                                               288) load
+I (120) esp_image: segment 3: paddr=0x00030018 vaddr=0x400d0018 size=0x5ddfc (38                                                                                            4508) map
+I (262) esp_image: segment 4: paddr=0x0008de1c vaddr=0x40080120 size=0x002e0 (                                                                                               736) load
+I (263) esp_image: segment 5: paddr=0x0008e104 vaddr=0x40080400 size=0x1113c ( 6                                                                                            9948) load
+I (298) esp_image: segment 6: paddr=0x0009f248 vaddr=0x400c0000 size=0x00000 (                                                                                                 0) load
+I (309) boot: Loaded app from partition at offset 0x10000
+I (309) boot: Disabling RNG early entropy source...
+I (310) cpu_start: Pro cpu up.
+I (313) cpu_start: Starting app cpu, entry point is 0x40080f94
+I (0) cpu_start: App cpu up.
+I (324) heap_init: Initializing. RAM available for dynamic allocation:
+I (331) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (337) heap_init: At 3FFB9268 len 00026D98 (155 KiB): DRAM
+I (343) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+I (349) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (356) heap_init: At 4009153C len 0000EAC4 (58 KiB): IRAM
+I (362) cpu_start: Pro cpu start user code
+I (45) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+LoRaWAN Gateway version:1.0.0 Beta1
+This is ESP32 chip with 2 CPU cores, WiFi/BT/BLE, silicon revision 0, 4MB extern                                                                                            al flash
+Calling CLoraNodeManager_CreateInstance
+CLoraNodeManager_New -> Debug level 2 (DEBUG)
+[DEBUG] CLoraNodeManager_New Entering: create object 1
+[DEBUG] CLoraNodeManager_New Entering: create object 2
+[DEBUG] CLoraNodeManager_New Entering: create object 3
+[DEBUG] CLoraNodeManager_New Entering: create object 4
+[DEBUG] CLoraNodeManager_New Entering: create object 5
+
+CLoraNodeManager_SessionManagerAutomaton, waiting, state: 0x00000000
+[DEBUG] CLoraNodeManager_New Entering: create object 6
+[DEBUG] CLoraNodeManager_New Entering: create object 7
+[DEBUG] CLoraNodeManager_New Entering: create object 8
+[DEBUG] CLoraNodeManager_New Entering: create object 9
+[DEBUG] CLoraNodeManager_New Entering: create object 10
+[DEBUG] CLoraNodeManager_New Entering: create object 11
+CSX1276_New -> Debug level 2 (DEBUG)
+CLoraRealtimeSender_New -> Debug level 2 (DEBUG)
+Return from CLoraNodeManager_CreateInstance
+Calling CLoraServerManager_CreateInstance
+CLoraServerManager_New -> Debug level 2 (DEBUG)
+[DEBUG] CLoraServerManager_New Entering: create object 1
+[DEBUG] CLoraServerManager_New Entering: create object 2
+[DEBUG] CLoraServerManager_New Entering: create object 3
+[DEBUG] CLoraServerManager_New Entering: create object 4
+[DEBUG] CLoraServerManager_New Entering: create object 5
+
+CLoraServerManager_ServerManagerAutomaton, waiting, state: 0x00000000
+[DEBUG] CLoraServerManager_New Entering: create object 6
+[DEBUG] CLoraServerManager_New Entering: create object 7
+[DEBUG] CLoraServerManager_New Entering: create object 8
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CLoraServerManager_New Entering: create object 9
+[DEBUG] CLoraServerManager_New Entering: create object 10
+[DEBUG] CLoraServerManager_New Entering: create object 11
+CESP32WifiConnector_New -> Debug level 2 (DEBUG)
+[DEBUG] CESP32WifiConnector_New Entering: create object 1
+[DEBUG] CESP32WifiConnector_New Entering: create object 2
+
+CESP32WifiConnector_WifiConnectorAutomaton, waiting, state: 0x00000000
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_New Entering: create object 3
+[DEBUG] CESP32WifiConnector_New Entering: create object 4
+[DEBUG] CESP32WifiConnector_New Entering: create object 5
+[DEBUG] CESP32WifiConnector_New Entering: create object 6
+[DEBUG] CESP32WifiConnector_New Entering: create object 7
+[DEBUG] CESP32WifiConnector_New Entering: create object 8
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSemtechProtocolEngine_New -> Debug level 2 (DEBUG)
+Return from CLoraServerManager_CreateInstance
+Calling ITransceiverManager_Initialize
+[INFO] CLoraNodeManager_Initialize, calling CLoraNodeManager_NotifyAndProcessCom                                                                                            mand
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CLoraNodeManager_ProcessInitialize'
+[INFO] CSX1276_Initialize, calling CSX1276_NotifyAndProcessCommand
+
+CSX1276_MainAutomaton, notify received: 0x00000001
+
+[INFO] Entering 'CSX1276_ProcessInitialize'
+
+Entering CSX1276_InitializeDevice
+Starting SX1276 LF/HF calibration
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000009 -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x00000082
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x000000C2
+
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x00000082
+
+Starting 'setChannel'
+
+[INFO] Starting 'CSX1276_isChannel'
+[INFO] Exiting 'CSX1276_isChannel'
+
+[WARNING] LoRa mode not set, activating now
+Starting 'setLORA'
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000080
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000023 -> 0x000000FF
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+[OK] LoRa mode set
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000006 -> 0x000000D9
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000007 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000008 -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000006 -> 0x000000D9
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000007 -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000008 -> 0x00000000
+[INFO] Frequency channel 0x00000011 has been successfully set
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x0000001D
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x0000005D
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000003B -> 0x0000005D
+[OK] SX1276 LF/HF calibration
+
+[INFO] Starting 'CSX1276_setMaxCurrent'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000B -> 0x0000003B
+[INFO] Maximum current protection set to 27
+Set LoRa mode with maximum current supply
+
+Starting 'setLORA'
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000080
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000023 -> 0x000000FF
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+[OK] LoRa mode set
+
+Starting CSX1276_setSyncWord
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000039 -> 0x00000034
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, idle - TO DO - maybe somethin                                                                                            g in background
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe somethi                                                                                            ng in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000039 -> 0x00000034
+[OK] Sync word set: 0x00000034
+
+[INFO] Starting 'CSX1276_setPreambleLength'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000020 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000021 -> 0x00000008
+[INFO] Preamble length 0x00000008 has been successfully set
+
+
+Starting 'CSX1276_setHeaderON'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+[INFO] Header has been activated
+
+
+[INFO] Starting 'CSX1276_setCRC_ON'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+[INFO] CRC has been activated
+
+[INFO] CSX1276 automaton state changed: 'INITIALIZED'
+
+[INFO] Entering 'CSX1276_ProcessSetLoraMode'
+
+[INFO] Starting 'CSX1276_setCR'
+
+[INFO] Starting 'CSX1276_isCR'
+[INFO] Exiting 'CSX1276_isCR'
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000008
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+[INFO] Coding Rate 0x00000001 has been successfully set
+
+
+[INFO] Starting 'CSX1276_setSF'
+
+[INFO] Starting 'CSX1276_isSF'
+[INFO] Exiting 'CSX1276_isSF'
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+Starting 'CSX1276_setHeaderON'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+[INFO] Header has been activated
+
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000031 -> 0x00000003
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000037 -> 0x0000000A
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000026 -> 0x00000004
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000026 -> 0x00000004
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000026 -> 0x00000004
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+[INFO] Spreading factor 7 has been successfully set
+
+
+Starting 'setBW'
+
+[INFO] Starting 'CSX1276_isBW'
+[INFO] Exiting 'CSX1276_isBW'
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000002
+
+[INFO] Starting 'CSX1276_getSF'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001E -> 0x00000074
+
+[INFO] Starting 'CSX1276_isSF'
+[INFO] Exiting 'CSX1276_isSF'
+
+[INFO] Spreading factor is 0x00000007
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000072
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001D -> 0x00000072
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000026 -> 0x00000004
+[INFO] Bandwidth 0x00000007 has been successfully set
+
+[DEBUG] CSX1276_ProcessSetLoraMode - Data Rate: SF7BW125
+[INFO] Device not configured. Remaining settings: Freq Channel, Power Level, Pow                                                                                            er Mode, OCP Rate
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, idle - TO DO - maybe somethin                                                                                            g in background
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+
+[INFO] Entering 'CSX1276_ProcessSetLoraMAC'
+[INFO] Device not configured. Remaining settings: Freq Channel, Power Level, Pow                                                                                            er Mode, OCP Rate
+
+[INFO] Entering 'CSX1276_ProcessSetFreqChannel'
+
+Starting 'setChannel'
+
+[INFO] Starting 'CSX1276_isChannel'
+[INFO] Exiting 'CSX1276_isChannel'
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000006 -> 0x000000D9
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000007 -> 0x00000006
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000008 -> 0x00000066
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000006 -> 0x000000D9
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe somethi                                                                                            ng in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[OK] Register: 0x00000007 -> 0x00000006
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000008 -> 0x00000066
+[INFO] Frequency channel 0x00000012 has been successfully set
+
+[INFO] Device not configured. Remaining settings: Power Level, Power Mode, OCP R                                                                                            ate
+
+[INFO] Entering 'CSX1276_ProcessSetPowerMode'
+
+[INFO] Starting 'CSX1276_setPowerMode'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000004D -> 0x00000084
+
+[INFO] Starting 'CSX1276_setMaxCurrent'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000B -> 0x0000002B
+[INFO] Maximum current protection set to 11
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000009 -> 0x00000073
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000009 -> 0x00000073
+[INFO] Power Mode successfully set
+
+[INFO] Device configured (all settings defined)
+[INFO] CSX1276 automaton state changed: 'STANDBY'
+[INFO] SX1276 successfully initialized for LoRA
+[INFO] CSX1276_Initialize, return from CSX1276_NotifyAndProcessCommand
+[DEBUG] CLoraRealtimeSender_Initialize - Entering funcion
+[DEBUG] CLoraNodeManager_ProcessInitialize, calling ITransceiverManager_Attach
+[DEBUG] CLoraServerManager_NotifyAndProcessCommand - Sending command (via LoraSe                                                                                            rverManager' queue)
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing):                                                                                             0x00000001
+
+[INFO] Entering 'CLoraServerManager_ProcessAttach'
+[INFO] CLoraServerManager successfully attached to forwarder
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[INFO] CLoraNodeManager automaton state changed: 'INITIALIZED'
+[INFO] CLoraNodeManager successfully initialized for LoRA
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[INFO] CLoraNodeManager_Initialize, return from CLoraNodeManager_NotifyAndProces                                                                                            sCommand
+Return from ITransceiverManager_Initialize
+Calling IServerManager_Initialize
+[DEBUG] CLoraServerManager_NotifyAndProcessCommand - Sending command (via LoraSe                                                                                            rverManager' queue)
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing):                                                                                             0x00000001
+
+[INFO] Entering 'CLoraServerManager_ProcessInitialize'
+[DEBUG] CESP32WifiConnector_NotifyAndProcessCommand - Sending command (via ESP32                                                                                            WifiConnector' queue)
+CSX1276_MainAutomaton, waiting notify
+
+[INFO] CESP32WifiConnector_WifiConnectorAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CESP32WifiConnector_ProcessInitialize'
+[INFO] 'CESP32WifiConnector_ProcessInitialize' - Event group before config copy:                                                                                            0x3FFCB4D0
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[INFO] 'CESP32WifiConnector_ProcessInitialize' - Event group after config copy:0                                                                                            x3FFCB4D0
+I (3270) wifi: wifi firmware version: f204566
+I (3270) wifi: config NVS flash: enabled
+I (3270) wifi: config nano formating: disabled
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+I (3440) wifi: Init dynamic tx buffer num: 32
+I (3440) wifi: Init data frame dynamic rx buffer num: 32
+I (3440) wifi: Init management frame dynamic rx buffer num: 32
+I (3440) wifi: wifi driver task: 3ffcfd00, prio:23, stack:4096
+I (3450) wifi: Init static rx buffer num: 10
+I (3450) wifi: Init dynamic rx buffer num: 32
+I (3460) wifi: wifi power manager task: 0x3ffd4940 prio: 21 stack: 2560
+I (3490) phy: phy_version: 366.0, ba9923d, Oct 31 2017, 18:06:17, 0, 0
+I (3490) wifi: mode : sta (24:0a:c4:02:72:b4)
+[INFO] Entering 'CESP32WifiConnector_JoinWifi'
+[INFO] 'CESP32WifiConnector_WifiEventHandler' - Event received: 2
+CSX1276_MainAutomaton, waiting notify
+[INFO] 'CESP32WifiConnector_JoinWifi' - Connecting station now...
+[INFO] 'CESP32WifiConnector_JoinWifi' - Waiting event group:0x3FFCB4D0, for: 60000ms
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+I (4720) wifi: n:10 0, o:1 0, ap:255 255, sta:10 0, prof:1
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+I (5710) wifi: state: init -> auth (b0)
+CSX1276_MainAutomaton, waiting notify
+I (5710) wifi: state: auth -> assoc (0)
+I (5710) wifi: state: assoc -> run (10)
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+I (6740) wifi: connected with NETGEAR_11ng, channel 10
+[INFO] 'CESP32WifiConnector_WifiEventHandler' - Event received: 4
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+I (7730) event: sta ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1
+[INFO] 'CESP32WifiConnector_WifiEventHandler' - Event: SYSTEM_EVENT_STA_GOT_IP
+[INFO] 'CESP32WifiConnector_UpdateConnectionState' - Entering, current state: 0
+I (7740) wpa: GTK 1 is already in use in entry 2, it may be an attack, ignor it.
+[INFO] 'CESP32WifiConnector_UpdateConnectionState' - State updated: 2
+[INFO] 'CESP32WifiConnector_JoinWifi' - Wait done
+[INFO] 'CESP32WifiConnector_JoinWifi' - Station connected to Wifi
+[INFO] Entering 'CESP32WifiConnector_ConnectSNTPServer'
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+I (8710) wifi: pm start, type:0
+
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[INFO] 'CESP32WifiConnector_ConnectSNTPServer - System time: '1546797411
+[INFO] Entering 'CESP32WifiConnector_BindNetworkServer'
+[INFO] 'CESP32WifiConnector_BindNetworkServer' - Server IP address is 52.169.76.203
+[INFO] 'CESP32WifiConnector_BindNetworkServer' - Server network address is 0xCB4CA934
+[INFO] 'CESP32WifiConnector_UpdateConnectionState' - Entering, current state: 2
+[INFO] 'CESP32WifiConnector_UpdateConnectionState' - State updated: 3
+[INFO] CESP32WifiConnector initialized for Wifi Network access (INITIALIZED state)
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Building STAT Heartbeat message (forced)
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Starting to build message, ticks: 814
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Transaction created: 0x3FFCBF4C, m_dwProtocolMessageId: 0x00FF0008, m_wMessageType: 0x00000000, m_wTransactionState: 0x00000001, m_usTransactionType: 0x00000001, (Param) m_wServerManagerMessageId: 0x000000FF
+[WARNING] CSemtechProtocolEngine_GetStatStream- TO DO: improve timestamp management
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Message stream (with header):
+0x02, 0x08, 0x00, 0x00, 0x24, 0x0A, 0xC4, 0xFF, 0xFE, 0x02, 0x72, 0xB4, {"stat":{"time":"2019-01-06 17:56:52 GMT","lati":45.835549,"long":2.281144,"alti":110,"rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0}}
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Message stream size: 157 bytes
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Number of pending uplink transactions: 1
+[DEBUG] CESP32WifiConnector_NotifyAndProcessCommand - Sending command (via ESP32WifiConnector' queue)
+
+[INFO] CESP32WifiConnector_WifiConnectorAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CESP32WifiConnector_ProcessSendReceive'
+[INFO] 'CESP32WifiConnector_ProcessSendReceive' - Sending PING message...
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] 'CESP32WifiConnector_ProcessSendReceive' - Before sendto, ticks:
+828
+[DEBUG] 'CESP32WifiConnector_ProcessSendReceive' - After recvfrom, ticks:
+834
+[INFO] 'CESP32WifiConnector_ProcessSendReceive' - Return from recvfrom, code(or length) = 4
+[INFO] 'CESP32WifiConnector_ProcessSendReceive' - First send/receive with Network Server successful (IDLE state)
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[INFO] CSemtechProtocolEngine_ProcessSessionEvent - Entered, event: 0x00000001
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction found: 0x3FFCBF4C, m_dwProtocolMessageId: 0x00FF0008, m_wMessageType: CSX1276_MainAutomaton, waiting notify
+0x00000000, m_wTransactionState: 0x00000001, m_usTransactionType: 0x00000001
+[INFO] CSemtechProtocolEngine_ProcessServerMessage - Entered
+[DEBUG] CSemtechProtocolEngine_ProcessServerMessage - Semtech token (in received msg): 0x00000008, Semtech msg type: 1
+[DEBUG] CSemtechProtocolEngine_ProcessServerMessage - Processing ACK, Transaction retrieved: 0x3FFCBF4C
+[INFO] CSemtechProtocolEngine_ProcessServerMessage - ACK received after (ms): 260
+[INFO] CSemtechProtocolEngine_ProcessSessionEvent - Entered, event: 0x00000004
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction found: 0x3FFCBF4C, m_dwProtocolMessageId: 0x00FF0008, m_wMessageType: 0x00000000, m_wTransactionState: 0x00000002, m_usTransactionType: 0x00000001
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Releasing Transaction memory block
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction memory block released
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Session released, ticks: 846
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Released - Number of pending uplink transactions: 0
+[INFO] CLoraServerManager_ProcessInitialize, connected to Network Server
+[DEBUG] CLoraServerManager_ProcessInitialize, calling ITransceiverManager_Attach
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CLoraNodeManager_ProcessAttach'
+[INFO] CLoraNodeManager automaton state changed: 'IDLE'
+[INFO] CLoraNodeManager successfully attached to forwarder
+CSX1276_MainAutomaton, waiting notify
+[INFO] CLoraServerManager automaton state changed: 'IDLE'
+[INFO] CLoraServerManager successfully initialized for Network Server access
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+Return from IServerManager_Initialize
+Calling ITransceiverManager_Start
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CLoraNodeManager_ProcessStart'
+
+CSX1276_MainAutomaton, notify received: 0x00000001
+
+[INFO] Entering 'CSX1276_ProcessReceive'
+
+Starting 'CSX1276_startReceive'
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000031 -> 0x00000043
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[OK] Register: 0x0000000A -> 0x00000009
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+CLoraServerManager_ConnectorAutomaton, waiting message
+[OK] Register: 0x0000000C -> 0x00000023
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000D -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001F -> 0x000000FF
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000025 -> 0x00000000
+
+Starting 'CSX1276_setPacketLength'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000022 -> 0x000000FF
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000022 -> 0x000000FF
+[INFO] Packet length 255 has been successfully set
+
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000012 -> 0x000000FF
+## LoRa IRQ flags cleared ##
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000040 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000085
+[INFO] Receiving mode successfully started in SX1276
+[INFO] CSX1276 automaton state changed: 'RECEIVING'
+[DEBUG] CLoraRealtimeSender_Start - Entering funcion
+[INFO] CLoraRealtimeSender_Start - Automaton state changed: 'RUNNING'
+[INFO] CLoraNodeManager automaton state changed: 'RUNNING'
+[INFO] CLoraNodeManager successfully started (ready to create sessions)
+Return from ITransceiverManager_Start
+Calling ITransceiverManager_Start
+[DEBUG] CLoraServerManager_NotifyAndProcessCommand - Sending command (via LoraServerManager' queue)
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing): 0x00000001
+
+[INFO] Entering 'CLoraServerManager_ProcessStart'
+[DEBUG] CESP32WifiConnector_NotifyAndProcessCommand - Sending command (via ESP32WifiConnector' queue)
+
+[INFO] CESP32WifiConnector_WifiConnectorAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CESP32WifiConnector_ProcessStart'
+[INFO] CESP32WifiConnector automaton state changed: 'RUNNING'
+[INFO] CESP32WifiConnector successfully started (ready to create sessions)
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[INFO] CLoraServerManager_ProcessStart, Start command sent to active ServerConnector
+CSX1276_MainAutomaton, waiting notify
+[INFO] CLoraServerManager automaton state changed: 'RUNNING'
+[INFO] CLoraServerManager successfully started (ready to create sessions)
+Return from IServerManager_Start
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[INFO] CESP32WifiConnector_ReceiveAutomaton, receiving message
+[DEBUG] CESP32WifiConnector_ReceiveAutomaton, calling recvfrom (blocking)
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+
+CSX1276_MainAutomaton, notify received: 0x00000002
+
+[INFO] Entering 'CSX1276_ProcessAutomatonNotifyPacketReceived'
+
+[INFO] Starting 'CSX1276_getPacket'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000012 -> 0x00000050
+[INFO] Packet properly received
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000013 -> 0x0000002C
+[INFO] Received byte number: 0x0000002C
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000D -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000040
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000032
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000011
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000001
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000026
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000001
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000002
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000052
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000007D
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000DA
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000002
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000C3
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000002B
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000007A
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000069
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000C0
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000027
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000AB
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000CA
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000C1
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000B8
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000CF
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[OK] Register: 0x00000000 -> 0x000000CC
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000AB
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000E1
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000029
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000009C
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000A3
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000051
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000019
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000005E
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000032
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000087
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000010
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000012
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000002B
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000F8
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000071
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000079
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000061
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x000000A0
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x0000000B
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+
+[INFO] Starting 'CSX1276_getRSSIpacket'
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+
+[INFO] Starting 'CSX1276_getSNR'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000019 -> 0x0000001B
+[INFO] SNR value is 6
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000001A -> 0x0000006F
+## RSSI packet value is -26 ##
+
+[INFO] Payload data:
+0x00000040|0x00000032|0x00000011|0x00000001|0x00000026|0x00000000|0x00000001|0x00000000|0x00000002|0x00000052|0x0000007D|0x000000DA|0x00000002|0x000000C3|0x0000002B|0x0000007A|0x00000069|0x000000C0[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+|0x00000027|0x000000AB|0x000000CA|0x000000C1|0x000000B8|0x000000CF|0x000000CC|0x000000AB|0x000000E1|0x00000029|0x0000009C|0x000000A3|0x00000051|0x00000019|0x0000005E|0x00000032|0x00000087|0x00000010|0x00000012|0x0000002B|0x000000F8|0x00000071|0x00000079|0x00000061|0x000000A0|0x0000000B|
+## Packet end
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000D -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000085
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000012 -> 0x000000FF
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000085
+## LoRa IRQ flags cleared ##
+
+CSX1276_MainAutomaton, notify received: 0x00000002
+
+[INFO] Entering 'CSX1276_ProcessAutomatonNotifyPacketReceived'
+
+[INFO] Starting 'CSX1276_getPacket'
+
+
+CLoraNodeManager_TransceiverAutomaton, message received: 0x00000001
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: LoraPacketSession MemBlock, index: 0x00000000, ptr: 0x3FFBE671
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: LoraPacket MemBlock, index: 0x00000000, ptr: 0x3FFBCD74
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: Copying packet to MemBlock
+[DEBUG] CSX1276_GetReceivedPacketInfo - Timestamp: 1546797423, Freq: 868.100, DataRate: SF7BW125, SNR: 6.0, RSSI: -26
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: Packet session created, SessionId: 0x00000001, Timestamp: 0x00004BA0, DeviceAddr: 0x26011132, FrameCounter: 0x00000001, MessageType: 0x00000002, Packet length: 0x0000002C
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: Transmitting packet to Forwarder
+[DEBUG] CLoraNodeManager_ProcessTransceiverUplinkReceived: Notifying task: 0x3FFC83B0
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_readRegister, dev:
+CLoraServerManager_NodeManagerAutomaton, new uplink packet session received: 0x00000001
+[DEBUG] CLoraServerManager_NodeManagerAutomaton. Received packet, addr: 0x3FFBCD74, Timestamp: 19360, Data size: 44, Head data: 0x000000400x3FFCC1B4
+,0x00000032,0x00000011,0x00000001
+[OK] Register: 0x00000012 -> 0x00000000
+[ERROR] NOT 'RxDone' flag
+[INFO] The CRC is correct
+[ERROR] Failed to transfer packet from SX1276
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[INFO] CLoraServerManager_NodeManagerAutomaton, uplink packet accepted
+[OK] Register: 0x0000000D -> 0x00000000
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+
+[OK] Register: 0x00000001 -> 0x00000085
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001000
+
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventUplinkAccepted'
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CLoraServerManager_NodeManagerAutomaton, Sending Event message, Addr: 0x3FFC366F, Id: 0x00000000, Lora packet: 0x3FFBCD74, Packet session: 0x3FFBE671, Packet Info: 0x3FFBE689
+[DEBUG] CLoraServerManager_ServerMessageEvent, Entering function
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[DEBUG] CLoraServerManager_ServerMessageEvent, Writing message in queue, Msg Type: 0x00001000, ticks: 2008
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: CLoraServerManager_ConnectorAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[OK] Register: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing): 0x00001000
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, Event message received, Type: 0x00001000, ticks: 2015
+[INFO] Entering 'CLoraServerManager_ProcessServerMessageEventUplinkReceived'
+[DEBUG] 'CLoraServerManager_ProcessServerMessageEventUplinkReceived' - ticks: 2016
+[DEBUG] CLoraServerManager_ProcessServerMessageEventUplinkReceived, Received message, Addr: 0x3FFC366F, Id: 0x00000000, Lora packet: 0x3FFBCD74, Packet session: 0x3FFBE671, Packet Info: 0x3FFBE689
+[DEBUG] CLoraServerManager_ProcessServerMessageEventUplinkReceived. Received packet, addr: 0x3FFBCD74, Timestamp: 19360, Data size: 44, Head data: 0x00000040,0x00000032,0x00000011,0x00000001
+0x00000012 -> 0x000000FF
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000085
+## LoRa IRQ flags cleared ##
+[ERROR] Failed to process PACKET_RECEIVED (receive error)
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Building PUSH_DATA message for LoRa packet
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Starting to build message, ticks: 2022
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Transaction created: 0x3FFCBF4C, m_dwProtocolMessageId: 0x00000010, m_wMessageType: 0x00000000, m_wTransactionState: 0x00000001, m_usTransactionType: 0x00000001, (Param) m_wServerManagerMessageId: 0x00000000
+[WARNING] CSemtechProtocolEngine_BuildUplinkMessage- TO DO: improve timestamp management
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- JSON Message stream (before base64):
+{"rxpk":[{"tmst":19360,"time":"2019-01-06T17:57:03.674704Z","freq":868.100,"modu":"LORA","datr":"SF7BW125","codr":"4/5","lsnr":6.0,"rssi":-26,"size":44,"chan":0,"rfch":0,"stat":1,"data":"
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- MaxMessageLength: 1534, current size: 199, diff: 1335
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] Payload data before encoding:
+0x40|0x32|0x11|0x01|0x26|0x00|0x01|0x00|0x02|0x52|0x7D|0xDA|0x02|0xC3|0x2B|0x7A|0x69|0xC0|0x27|0xAB|0xCA|0xC1|0xB8|0xCF|0xCC|0xAB|0xE1|0x29|0x9C|0xA3|0x51|0x19|0x5E|0x32|0x87|0x10|0x12|0x2B|0xF8|0x71|0x79|0x61|0xA0|0x0B|
+## Packet end
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] Encoded payload length: 60
+[DEBUG] Encoded Payload data: QDIRASYAAQACUn3aAsMremnAJ6vKwbjPzKvhKZyjURleMocQEiv4cXlhoAs=
+[DEBUG] Payload data after encoding and decoding:
+0x40|0x32|0x11|0x01|0x26|0x00|0x01|0x00|0x02|0x52|0x7D|0xDA|0x02|0xC3|0x2B|0x7A|0x69|0xC0|0x27|0xAB|0xCA|0xC1|0xB8|0xCF|0xCC|0xAB|0xE1|0x29|0x9C|0xA3|0x51|0x19|0x5E|0x32|0x87|0x10|0x12|0x2B|0xF8|0x71|0x79|0x61|0xA0|0x0B|
+## Packet end
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Message stream (with header):
+0x02, 0x10, 0x00, 0x00, 0x24, 0x0A, 0xC4, 0xFF, 0xFE, 0x02, 0x72, 0xB4, {"rxpk":[{"tmst":19360,"time":"2019-01-06T17:57:03.674704Z","freq":868.100,"modu":"LORA","datr":"SF7BW125","codr":"4/5","lsnr":6.0,"rssi":-26,"size":44,"chan":0,"rfch":0,"stat":1,"data":"QDIRASYAAQACUn3aAsMremnAJ6vKwbjPzKvhKZyjURleMocQEiv4cXlhoAs="}]}
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Message stream size: 263 bytes
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage- Number of pending uplink transactions: 1
+CSX1276_MainAutomaton, waiting notify
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001002
+
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventUplinkProgressing'
+[INFO] CLoraNodeManager_ProcessSessionEventUplinkProgressing, LoraPacketSession releasing LoRa packet, SessionId: 0x00000001
+[DEBUG] CLoraServerManager_ServerMessageEvent, Entering function
+[DEBUG] CLoraServerManager_ServerMessageEvent, Writing message in queue, Msg Type: 0x00001001, ticks: 2047
+[DEBUG] CLoraNodeManager_ProcessSessionEventUplinkProgressing, LoraPacket destroyed
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing): 0x00001001
+[INFO] CLoraNodeManager_ProcessSessionEventUplinkProgressing, Session state updated 'SENDING_UPLINK'
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, Event message received, Type: 0x00001001, ticks: 2052
+[INFO] Entering 'CLoraServerManager_ProcessServerMessageEventUplinkPrepared'
+[DEBUG] 'CLoraServerManager_ProcessServerMessageEventUplinkPrepared' - ticks: 2053
+[INFO] Entering 'CLoraServerManager_SendServerMessage'
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_NotifyAndProcessCommand - Sending command (via ESP32WifiConnector' queue)
+
+[INFO] CESP32WifiConnector_WifiConnectorAutomaton, message received: 0x00000001
+[INFO] Entering 'CESP32WifiConnector_ProcessSend'
+[INFO] CESP32WifiConnector - trying to send message (sendto: 263 bytes)
+[DEBUG] CESP32WifiConnector_ProcessSend - Before sendto, ticks: 2058
+[DEBUG] CESP32WifiConnector_ProcessSend - After sendto, ticks: 2059
+[INFO] CESP32WifiConnector_ProcessSend - message sent
+[INFO] Entering 'CESP32WifiConnector_ProcessSend' - Notifying ServerManager for send result
+[DEBUG] CLoraServerManager_ConnectorAutomaton, Event message received (processing), Type: 0x00000001, ticks: 2060
+[DEBUG] CLoraServerManager_ServerMessageEvent, Entering function
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CLoraServerManager_ServerMessageEvent, Writing message in queue, Msg Type: 0x00001003, ticks: 2063
+[INFO] CLoraServerManager_SendServerMessage, Command posted to ServerConnector (executed later)
+[DEBUG] 'CESP32WifiConnector_ReceiveAutomaton' - After recvfrom, ticks:
+[INFO] CLoraServerManager_ProcessServerMessageEventUplinkPrepared, connector has accepted to send message to Network Server (async)
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+2067
+[INFO] 'CESP32WifiConnector_ReceiveAutomaton' - Return from recvfrom, code(or length) = 4
+[INFO] CESP32WifiConnector_ReceiveAutomaton, receiving message
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing): 0x00001003
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, Event message received, Type: 0x00001003, ticks: 2070
+[INFO] Entering 'CLoraServerManager_ProcessServerMessageEventUplinkSent'
+[DEBUG] 'CLoraServerManager_ProcessServerMessageEventUplinkSent' - ticks: [DEBUG] CESP32WifiConnector_ReceiveAutomaton, calling recvfrom (blocking)
+[DEBUG] CLoraServerManager_ConnectorAutomaton, Event message received (processing), Type: 2073
+[INFO] CSemtechProtocolEngine_ProcessSessionEvent - Entered, event: 0x00000001
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction found: 0x3FFCBF4C, m_dwProtocolMessageId: 0x00000010, m_wMessageType: 0x00000000, m_wTransactionState: 0x00000001, m_usTransactionType: 0x00000001
+0x00000002, ticks: 2077
+
+CLoraServerManager_ConnectorAutomaton, downlink message received, size: 4
+[INFO] CSemtechProtocolEngine_ProcessServerMessage - Entered
+[DEBUG] CSemtechProtocolEngine_ProcessServerMessage - Semtech token (in received msg): 0x00000010, Semtech msg type: 1
+[DEBUG] CSemtechProtocolEngine_ProcessServerMessage - Processing ACK, Transaction retrieved: [INFO] 'CLoraServerManager_ProcessServerMessageEventUplinkSent' - ProtocolEngine asks to wait
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+0x3FFCBF4C
+[INFO] CSemtechProtocolEngine_ProcessServerMessage - ACK received after (ms): 570
+[DEBUG] CESP32WifiConnector_NotifyAndProcessCommand - Sending command (via ESP32WifiConnector' queue)
+
+[INFO] CESP32WifiConnector_WifiConnectorAutomaton, message received: 0x00000001
+
+[INFO] Entering 'CESP32WifiConnector_ProcessDownlinkReceived'
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[INFO] CLoraServerManager_ConnectorAutomaton, ProtocolEngine session terminated
+[DEBUG] CLoraServerManager_ServerMessageEvent, Entering function
+[DEBUG] CLoraServerManager_ServerMessageEvent, Writing message in queue, Msg Type: 0x00001004, ticks: 2087
+CLoraServerManager_ConnectorAutomaton, waiting message
+
+[INFO] CLoraServerManager_ServerManagerAutomaton, message received (processing): 0x00001004
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, Event message received, Type: 0x00001004, ticks: 2089
+[INFO] Entering 'CLoraServerManager_ProcessServerMessageEventUplinkTerminated'
+[DEBUG] 'CLoraServerManager_ProcessServerMessageEventUplinkTerminated' - ticks: 2091
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraServerManager_ProcessServerMessageEventUplinkTerminated, processing session for LoRa packet send
+[DEBUG] CLoraServerManager_ProcessServerMessageEventUplinkTerminated, destroying LoraServerUpMessage, id: 0x00000000
+[INFO] CSemtechProtocolEngine_ProcessSessionEvent - Entered, event: 0x00000004
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001003
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventUplinkSent'
+[DEBUG] 'CLoraNodeManager_ProcessSessionEventUplinkSent' - ticks: 2096
+[INFO] 'CLoraNodeManager_ProcessSessionEventUplinkSent' Session is alive
+[WARNING] 'CLoraNodeManager_ProcessSessionEventUplinkSent' - TO DO: Update code in final version - Only for confirmed messages
+[DEBUG] CLoraNodeManager_ProcessServerDownlinkReceived: LoraPacketSession MemBlock, index: 0x00000000, ptr: 0x3FFBE9D7
+[DEBUG] CLoraNodeManager_ProcessServerDownlinkReceived: LoraPacket MemBlock, index: 0x00000000, ptr: 0x3FFBCD74
+[DEBUG] CLoraNodeManager_ProcessServerDownlinkReceived: Copying packet to MemBlock
+[DEBUG] CLoraNodeManager_ProcessServerDownlinkReceived: Packet session created, SessionId: 0x00000001, DeviceAddr: 0x26011132, Packet length: 0x0000000A[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction found: CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+0x3FFCBF4C, m_dwProtocolMessageId: 0x00000010, m_wMessageType: 0x00000000, m_wTransactionState: 0x00000002, m_usTransactionType: 0x00000001
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Releasing Transaction memory block
+
+[DEBUG] CLoraNodeManager_ProcessServerDownlinkReceived: Transmitting packet to RealtimeLoraSender
+[DEBUG] Entering 'CLoraRealtimeSender_ScheduleSendNodePacket' - ticks: 2107
+[INFO] CLoraRealtimeSender_ScheduleSendNodePacket - Scheduling downlink packet for send
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Transaction memory block released
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Session released, ticks: 2109
+[DEBUG] CSemtechProtocolEngine_ProcessSessionEvent - Released - Number of pending uplink transactions: 0
+[INFO] CLoraRealtimeSender_PacketSenderAutomaton, next packet scheduled:
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton - ticks: 2111
+[INFO] 'CLoraNodeManager_ProcessSessionEventUplinkSent' downlink LoRa session scheduled for ACK
+[INFO] 'CLoraNodeManager_ProcessSessionEventUplinkSent' Session state updated 'UPLINK_SENT'
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+
+CSX1276_MainAutomaton, notify received: 0x00000001
+
+[INFO] Entering 'CSX1276_ProcessSend'
+
+Starting 'CSX1276_startStandBy'
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+[INFO] StandBy mode successfully started in SX1276
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001005
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventDownlinkScheduled'
+[DEBUG] 'CLoraNodeManager_ProcessSessionEventDownlinkScheduled' - ticks: 2119
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+
+Starting 'CSX1276_startSend'
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000E -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x0000000D -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000040
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000032
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000011
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000001
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000026
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000010
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000001
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000000
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000000 -> 0x00000000
+[INFO] Packet bytes copied in FIFO
+Bytes to send: 0x00000040|0x00000032|0x00000011|0x00000001|0x00000026|0x00000010|0x00000001|0x00000000|0x00000000|0x00000000|End payload bytes
+
+CSX1276_readRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000081
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000012 -> 0x000000FF
+## LoRa IRQ flags cleared ##
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000040 -> 0x00000040
+
+CSX1276_writeRegister, dev: 0x3FFCC1B4
+[OK] Register: 0x00000001 -> 0x00000083
+[INFO] The SX1276 in now sending packet
+[INFO] CSX1276 automaton state changed: 'SENDING'
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[INFO] CLoraRealtimeSender_PacketSenderAutomaton - LoRa packet currently sent by transceiver
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton - transceiver sending... - ticks: 2138
+CLoraServerManager_ConnectorAutomaton, waiting message
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001006
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventDownlinkSending'
+[DEBUG] 'CLoraNodeManager_ProcessSessionEventDownlinkSending' - ticks: 2141
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+
+CSX1276_MainAutomaton, notify received: 0x00000004
+
+[INFO] Entering 'CSX1276_ProcessAutomatonNotifyPacketSent'
+[INFO] CSX1276 automaton state changed: 'STANDBY'
+
+CLoraNodeManager_TransceiverAutomaton, message received: 0x00000002
+[DEBUG] CLoraNodeManager_ProcessTransceiverDownlinkSent: Enumerator loop:
+Event packet: 0x3FFBCD74, Session packet: 0x3FFBCD74
+CLoraNodeManager_TransceiverAutomaton, waiting message
+
+[INFO] CLoraNodeManager_SessionManagerAutomaton, message received: 0x00001007
+[INFO] Entering 'CLoraNodeManager_ProcessSessionEventDownlinkSent'
+[DEBUG] 'CLoraNodeManager_ProcessSessionEventDownlinkSent' - ticks: 2179
+[INFO] Entering CLoraNodeManager_ReleaseDownlinkSession
+[DEBUG] 'CLoraNodeManager_ReleaseDownlinkSession' - Released - ticks: 2180
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, Enumerator, session block ready, index: 0x00000000
+[INFO] CLoraNodeManager_SessionManagerAutomaton, LoraPacketSession terminated, destroying session, SessionId: 0x00000001
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, LoraPacketSession destroyed
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[INFO] CLoraRealtimeSender_RemoveExpiredNodeReceiveWindows - Removed expired RX windows
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, checking expired sessions
+[DEBUG] CLoraNodeManager_SessionManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraServerManager_ConnectorAutomaton, waiting message
+[DEBUG] CLoraRealtimeSender_PacketSenderAutomaton, waiting message
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Heartbeat not required
+[DEBUG] CSemtechProtocolEngine_BuildUplinkMessage - Number of pending uplink transactions for LoRa messages: 0
+[DEBUG] 'CLoraServerManager_ServerManagerAutomaton', No heartbeat required
+[DEBUG] CLoraServerManager_ServerManagerAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, idle - TO DO - maybe something in background
+[DEBUG] CESP32WifiConnector_WifiConnectorAutomaton, waiting message
+CLoraServerManager_NodeManagerAutomaton, waiting notify
+CSX1276_MainAutomaton, waiting notify
+CLoraNodeManager_TransceiverAutomaton, waiting message
+CSX1276_MainAutomaton, waiting notify
+

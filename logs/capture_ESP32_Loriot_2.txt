@@ -1,0 +1,101 @@
+No.     Time           Source                Destination           Protocol Length Info
+    127 49.416905      192.168.1.100         192.168.1.15          UDP      203    49154 → 1780 Len=161
+
+Frame 127: 203 bytes on wire (1624 bits), 203 bytes captured (1624 bits) on interface 0
+Ethernet II, Src: Espressi_02:72:b4 (24:0a:c4:02:72:b4), Dst: AsustekC_28:cf:d9 (70:4d:7b:28:cf:d9)
+    Destination: AsustekC_28:cf:d9 (70:4d:7b:28:cf:d9)
+        Address: AsustekC_28:cf:d9 (70:4d:7b:28:cf:d9)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Espressi_02:72:b4 (24:0a:c4:02:72:b4)
+        Address: Espressi_02:72:b4 (24:0a:c4:02:72:b4)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.100, Dst: 192.168.1.15
+User Datagram Protocol, Src Port: 49154, Dst Port: 1780
+    Source Port: 49154
+    Destination Port: 1780
+    Length: 169
+    Checksum: 0x6967 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 5]
+Data (161 bytes)
+    Data: 02080000240ac4ffff0272b47b2273746174223a7b227469...
+    [Length: 161]
+
+0000  70 4d 7b 28 cf d9 24 0a c4 02 72 b4 08 00 45 00   pM{(..$...r...E.
+0010  00 bd 00 05 00 00 ff 11 37 67 c0 a8 01 64 c0 a8   ........7g...d..
+0020  01 0f c0 02 06 f4 00 a9 69 67 02 08 00 00 24 0a   ........ig....$.	
+0030  c4 ff ff 02 72 b4 7b 22 73 74 61 74 22 3a 7b 22   ....r.{"stat":{"
+0040  74 69 6d 65 22 3a 22 32 30 31 38 2d 31 30 2d 32   time":"2018-10-2
+0050  37 54 31 39 3a 34 36 3a 33 30 20 47 4d 54 22 2c   7T19:46:30 GMT",
+0060  22 6c 61 74 69 22 3a 34 35 2e 38 33 35 35 34 39   "lati":45.835549
+0070  2c 22 6c 6f 6e 67 22 3a 32 2e 32 38 31 31 34 34   ,"long":2.281144
+0080  2c 22 61 6c 74 69 22 3a 31 31 30 2c 22 72 78 6e   ,"alti":110,"rxn
+0090  62 22 3a 30 2c 22 72 78 6f 6b 22 3a 30 2c 22 72   b":0,"rxok":0,"r
+00a0  78 66 77 22 3a 30 2c 22 61 63 6b 72 22 3a 2e 30   xfw":0,"ackr":.0
+00b0  2e 30 30 30 30 30 30 2c 22 64 77 6e 62 22 3a 30   .000000,"dwnb":0
+00c0  2c 22 74 78 6e 62 22 3a 30 7d 7d                  ,"txnb":0}}
+
+
+
+FROM LOPY :
+
+0000  70 4d 7b 28 cf d9 24 0a c4 02 72 b4 08 00 45 00   pM{(..$...r...E.
+0010  00 bc 00 44 00 00 ff 11 37 29 c0 a8 01 64 c0 a8   ...D....7)...d..
+0020  01 0f c0 02 06 f4 00 a8 5d 96 02 85 42 00 24 0a   ........]...B.$.
+0030  c4 ff ff 02 72 b4 7b 22 73 74 61 74 22 3a 20 7b   ....r.{"stat": {
+0040  22 61 6c 74 69 22 3a 20 30 2c 20 22 72 78 6f 6b   "alti": 0, "rxok
+0050  22 3a 20 30 2c 20 22 72 78 66 77 22 3a 20 30 2c   ": 0, "rxfw": 0,
+0060  20 22 61 63 6b 72 22 3a 20 31 30 30 2e 30 2c 20    "ackr": 100.0, 
+0070  22 64 77 6e 62 22 3a 20 30 2c 20 22 6c 6f 6e 67   "dwnb": 0, "long
+0080  22 3a 20 30 2c 20 22 74 78 6e 62 22 3a 20 30 2c   ": 0, "txnb": 0,
+0090  20 22 72 78 6e 62 22 3a 20 30 2c 20 22 74 69 6d    "rxnb": 0, "tim
+00a0  65 22 3a 20 22 32 30 31 38 2d 31 30 2d 32 37 20   e": "2018-10-27 
+00b0  31 37 3a 32 39 3a 34 31 20 47 4d 54 22 2c 20 22   17:29:41 GMT", "
+00c0  6c 61 74 69 22 3a 20 30 7d 7d                     lati": 0}}
+
+
+
+COMPARED :
+
+0000  70 4d 7b 28 cf d9 24 0a c4 02 72 b4 08 00 45 00   pM{(..$...r...E.
+LOPY  70 4d 7b 28 cf d9 24 0a c4 02 72 b4 08 00 45 00   pM{(..$...r...E.
+
+0010  00 bd 00 05 00 00 ff 11 37 67 c0 a8 01 64 c0 a8   ........7g...d..
+LOPY  00 bc 00 44 00 00 ff 11 37 29 c0 a8 01 64 c0 a8   ...D....7)...d..
+
+0020  01 0f c0 02 06 f4 00 a9 69 67 |> 02 08 00 00 24 0a   ........ig....$.	      // data commence à |> 
+LOPY  01 0f c0 02 06 f4 00 a8 5d 96 |> 02 85 42 00 24 0a   ........]...B.$.
+
+0030  c4 ff ff 02 72 b4 7b 22 73 74 61 74 22 3a 7b 22   ....r.{"stat":{"
+LOPY  c4 ff ff 02 72 b4 7b 22 73 74 61 74 22 3a 20 7b   ....r.{"stat": {
+
+0040  74 69 6d 65 22 3a 22 32 30 31 38 2d 31 30 2d 32   time":"2018-10-2
+LOPY  22 61 6c 74 69 22 3a 20 30 2c 20 22 72 78 6f 6b   "alti": 0, "rxok
+
+0050  37 54 31 39 3a 34 36 3a 33 30 20 47 4d 54 22 2c   7T19:46:30 GMT",
+LOPY  22 3a 20 30 2c 20 22 72 78 66 77 22 3a 20 30 2c   ": 0, "rxfw": 0,
+
+0060  22 6c 61 74 69 22 3a 34 35 2e 38 33 35 35 34 39   "lati":45.835549
+LOPY  20 22 61 63 6b 72 22 3a 20 31 30 30 2e 30 2c 20    "ackr": 100.0,
+
+0070  2c 22 6c 6f 6e 67 22 3a 32 2e 32 38 31 31 34 34   ,"long":2.281144
+LOPY  22 64 77 6e 62 22 3a 20 30 2c 20 22 6c 6f 6e 67   "dwnb": 0, "long
+
+0080  2c 22 61 6c 74 69 22 3a 31 31 30 2c 22 72 78 6e   ,"alti":110,"rxn
+LOPY  22 3a 20 30 2c 20 22 74 78 6e 62 22 3a 20 30 2c   ": 0, "txnb": 0,
+
+0090  62 22 3a 30 2c 22 72 78 6f 6b 22 3a 30 2c 22 72   b":0,"rxok":0,"r
+LOPY  20 22 72 78 6e 62 22 3a 20 30 2c 20 22 74 69 6d    "rxnb": 0, "tim
+
+00a0  78 66 77 22 3a 30 2c 22 61 63 6b 72 22 3a 2e 30   xfw":0,"ackr":.0
+LOPY  65 22 3a 20 22 32 30 31 38 2d 31 30 2d 32 37 20   e": "2018-10-27
+
+00b0  2e 30 30 30 30 30 30 2c 22 64 77 6e 62 22 3a 30   .000000,"dwnb":0
+LOPY  31 37 3a 32 39 3a 34 31 20 47 4d 54 22 2c 20 22   17:29:41 GMT", "
+
+00c0  2c 22 74 78 6e 62 22 3a 30 7d 7d                  ,"txnb":0}}
+LOPY  6c 61 74 69 22 3a 20 30 7d 7d			lati": 0}}
+

@@ -1,0 +1,42 @@
+
+/*! \file structcmd.h
+    \brief A Documented file.
+    
+    Details.
+*/
+
+
+/*!
+\fn         ILoraTransceiver CSX1276_CreateCSX1276Instance()
+
+\brief      Start the HTTP server. 
+
+\details    The listen sockets (Command and Event) are created and the ACC server is ready to
+            receive incoming connection requests.
+
+\argument   this
+            The object pointer 
+ 
+\return     The function returns 'true' if the ACC server is started. 
+
+\note       Events on listen sockets are detected and processed by the 'CAccServer_ProcessEvents' 
+            function (periodically called by the owner object).
+*/
+ILoraTransceiver CSX1276_CreateCSX1276Instance()
+{
+  CSX1276 * pSX1276;
+
+  // Create the object
+  if ((pSX1276 = CSX1276_New(0)) != NULL)
+  {
+    // Create the 'ILoraTransceiver' interface object
+    if ((pSX1276->m_pLoraTransceiverItf = ILoraTransceiver_New(pSX1276, &g_LoraTransceiverItfImplOb)) != NULL)
+    {
+      ++(pSX1276->m_nRefCount);
+    }
+    return pSX1276->m_pLoraTransceiverItf;
+  }
+
+  return NULL;
+}
+

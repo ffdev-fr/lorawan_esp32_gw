@@ -1,0 +1,195 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Debug"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdlorawan_esp32_gw"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -g %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -g -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Config
+		Name="Release"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdlorawan_esp32_gw"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				OutputExts="*.o"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -O %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -O -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Rules Name="Compile">
+		<Rule
+			InputExts="*.s"
+			OutputExts="*.o"
+			LinkObject="1">
+			<Exec CmdLine='as -o "%bd%n.o" "%f"'/>
+		</Rule>
+	</Rules>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+			<F N="main/AppMain.c"/>
+			<F N="main/ESP32WifiConnector.c"/>
+			<F N="main/LoraNodeManager.c"/>
+			<F N="main/LoraRealtimeSender.c"/>
+			<F N="main/LoraRealtimeSenderItf.c"/>
+			<F N="main/LoraServerManager.c"/>
+			<F N="main/LoraTransceiverItf.c"/>
+			<F N="main/NetworkServerProtocolItf.c"/>
+			<F N="main/SemtechProtocolEngine.c"/>
+			<F N="main/ServerConnectorItf.c"/>
+			<F N="main/ServerManagerItf.c"/>
+			<F N="main/SX1276.c"/>
+			<F N="main/TransceiverManagerItf.c"/>
+			<F N="main/Utilities.c"/>
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+			<F N="main/include/Common.h"/>
+			<F N="main/include/Configuration.h"/>
+			<F N="main/include/Definitions.h"/>
+			<F N="main/include/ESP32WifiConnector.h"/>
+			<F N="main/include/ESP32WifiConnectorItf.h"/>
+			<F N="main/include/LoraNodeManager.h"/>
+			<F N="main/include/LoraNodeManagerItf.h"/>
+			<F N="main/include/LoraRealtimeSender.h"/>
+			<F N="main/include/LoraRealtimeSenderItf.h"/>
+			<F N="main/include/LoraRealtimeSenderItfImpl.h"/>
+			<F N="main/include/LoraServerManager.h"/>
+			<F N="main/include/LoraServerManagerItf.h"/>
+			<F N="main/include/LoraTransceiverItf.h"/>
+			<F N="main/include/LoraTransceiverItfImpl.h"/>
+			<F N="main/include/NetworkServerProtocolItf.h"/>
+			<F N="main/include/NetworkServerProtocolItfImpl.h"/>
+			<F N="main/include/SemtechProtocolEngine.h"/>
+			<F N="main/include/SemtechProtocolEngineItf.h"/>
+			<F N="main/include/ServerConnectorItf.h"/>
+			<F N="main/include/ServerConnectorItfImpl.h"/>
+			<F N="main/include/ServerManagerItf.h"/>
+			<F N="main/include/ServerManagerItfImpl.h"/>
+			<F N="main/include/SX1276.h"/>
+			<F N="main/include/SX1276Itf.h"/>
+			<F N="main/include/TransceiverManagerItf.h"/>
+			<F N="main/include/TransceiverManagerItfImpl.h"/>
+			<F N="main/include/Utilities.h"/>
+			<F N="main/include/Version.h"/>
+		</Folder>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+			<F N="doxygen.cfg"/>
+			<F N="logs/LoPyGW.log"/>
+			<F N="Resources/Semtech_NS_Protocol.txt"/>
+			<F N="Libelium_Port/SX1276_Port.c"/>
+			<F N="Libelium_Port/SX1276_Port.h"/>
+		</Folder>
+	</Files>
+</Project>
